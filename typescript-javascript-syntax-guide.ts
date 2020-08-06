@@ -65,7 +65,7 @@ export { Any }
 // Instead of exporting after we declare our types we can export at the site of
 // declaration. This exports an alias named "AnyList" which is denotes an array
 // of any one of the basic JavaScript data types.
-export AnyList = Any[];
+export type AnyList = Any[];
 
 			/* Variables */
 
