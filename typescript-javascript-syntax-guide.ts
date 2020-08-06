@@ -102,7 +102,7 @@ const myNumber:number = 24;
 let myTruth = true;
 
 //TypeScript
-ley myFalsehood:boolean = false;
+let myFalsehood:boolean = false;
 
 // This declares a variable that contains a string. Strings are a sequence of one
 // or more text characters between quotes (single or double). The back tick 
