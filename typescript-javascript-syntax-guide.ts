@@ -152,10 +152,10 @@ let obj = Object.create(null);
 // language could do. We are interested in using these variables and their values
 // to have the engine compute results on our behalf. To do this, we use Expressions.
 // An Expression is valid syntax that the engine can evaluate to a single value.
-// Any of valid value of the data types described earlier by themselves can be
-// considered an expression because they can be evaluated to a single value (themselves!).
+// Any of the data types described earlier by themselves, can be
+// considered an expression because they evaluate to a single value (themselves!).
 // However, these values can be combined together to make more complex calculations
-// that form the meat of our programs and scripts.
+// that form the meat of our programs and scripts. This is done using operators.
 // Below are some of the more common operators:
 
 // Comparison Operators test whether a relationship between to operands is true or not.
@@ -189,20 +189,20 @@ let obj = Object.create(null);
 // the programmer avoid reapeating themselves too often.
 //
 // Functions typically implement some part of an algorithim, those algorithims
-// when combined solve the problem our program is designed to handle.
-// JavaScript provides more than one way define a function depending on the 
+// when combined solve the problem our program as a whole.
+// JavaScript provides more than one way to define a function depending on the 
 // version your engine supports.
 
 // Regular JavaScript Function
 function myFunction(param1, param2) {
  /* This is called the body of the function or the function's scope */
  return param1 + param2;
-} 
+}
 
 // In the above, the name of the function is "myFunction". The "param1" and "param2"
 // are called the "function parameters" and are the input the function accepts to
 // do its processing. This part of a function is usually written between parenthesis,
-// that is the "(" )". Each parameter is separated by a comma. In theory you can
+// that is the "(" ")". Each parameter is separated by a comma. In theory you can
 // have as many parameters as you need but in practice 3-4 is more than enough.
 // When a function is "called", these parameters become variables and should be
 // supplied in order for the function to work.
@@ -217,28 +217,28 @@ function myFunction(param1, param2) {
 // keyword imediately ends the execution of a function and provides the expression
 // supplied after it to the caller of the function. This is effectively the way a
 // function provides output.
-//
-// It is called the return value of the function and because of this mechanism,
-// functions can be used as expressions:
-
+// (Remember functions basically accept input, do processing and then output the
+// result).
+// The output of a function is called the return value of the function.
+// Because of this mechanism, functions can be used as expressions:
 let myFunctionResult = myFunction(10, 20) // myFunctionResult is now 30
 
 // myFunction returns the result of the expression param1 + param2
 // This function can be defined in TypeScript, to make it more obvious:
-function myFunctionTS(param1:number, param2:number): number {
+function myFunctionTS2(param1:number, param2:number): number {
   return param1 + param2;
 }
 
 // The above is the same function, only defined in TypeScript. The colon after
 // a parameter name in TypeScript denotes the type of the parameter. In our case,
 // we are saying param1 and param2 have the type of number. The colon outside the
-// parenthesis, the `) : number ` part, is the type of the function.
+// parenthesis, the `) : number ` part, tells the type of the function.
 //
 // Functions get there types based on the type of their return value. In our
-// `myFunctionTS`'s case, the return type is a number because the result of
+// `myFunctionTS2`'s case, the return type is a number because the result of
 // adding two numbers together, is a new number.
 
-// There is an alternative syntax for defining functions which is much shorter:
+// There is an alternative syntax for defining functions which is much shorter (JavaScript):
 const myArrowFunction = (param1, param2) => {
    return param1 + param2
 }
@@ -248,7 +248,7 @@ const myArrowFunctionTS = (param1:number, param2:number) : number => {
 }
 
 // For functions such as ours above that simply return an expression, we can make
-// this even shorter:
+// this even shorter (JavaScript):
 const myShortArrowFunction = (param1, param2) => param1 + param2;
 
 // The above arrow syntax, are actually variable declarations. 
