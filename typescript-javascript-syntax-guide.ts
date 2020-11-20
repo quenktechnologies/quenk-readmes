@@ -261,18 +261,20 @@ const myShortArrowFunction = (param1, param2) => param1 + param2;
 			/* Calling A Function */
 
 // When we call a function, we are effectively telling our engine to execute the 
-// functions body, and give us the result. Sometimes we store the result in a variable,
-// pass it to another function or simply ignore it.
+// function's body, and give us the result. Sometimes we store the result in a variable,
+// pass it to another function or even ignore it.
 // The below demonstrates calling a function:
 myFunction();
 
 // However if a function has one or more parameters, we should provide them otherwise
-// an error is likely to occur. Furthermore we should ensure we pass the type of 
-// parameters the function expects and in the expected order.
-myFunction(10,12);
+// errors are likely to occur. Furthermore we should ensure we pass the type of 
+// parameters the function expects and in the expected order. When we pass values
+// to a function call, they are called arguments. Each argument is seperated by a
+// comma.
+myFunction(10, 12);
 
 // In the above we have passed the parameters 10 and 12 respectively to our 
-// `myFunction` function. When used in this manner, 10 and 12 are called the arguments
+// function. When used in this manner, 10 and 12 are called the arguments
 // to the function.
 //
 // We can get a little fancy here by combining our function calls because after all,
