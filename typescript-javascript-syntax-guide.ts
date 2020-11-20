@@ -266,19 +266,19 @@ const myShortArrowFunction = (param1, param2) => param1 + param2;
 // The below demonstrates calling a function:
 myFunction();
 
-// However if a function has one or more parameters, we should provide them otherwise
+// However if a function takes one or more parameters, we should provide them otherwise
 // errors are likely to occur. Furthermore we should ensure we pass the type of 
 // parameters the function expects and in the expected order. When we pass values
-// to a function call, they are called arguments. Each argument is seperated by a
-// comma.
+// to a function call, they are called arguments. 
 myFunction(10, 12);
 
 // In the above we have passed the parameters 10 and 12 respectively to our 
 // function. When used in this manner, 10 and 12 are called the arguments
-// to the function.
+// to the function. Each argument is seperated by a comma, a function call can have zero
+// or more arguments.
 //
-// We can get a little fancy here by combining our function calls because after all,
-// they are expressions:
+// We can get a little fancy here by combining our function calls because after all;
+// function calls are also expressions:
 let result = myFunction(myArrowFunction(10,12), 8);
 // In the above, result will have a value of 30, try to figure out why.
 
